@@ -1,0 +1,127 @@
+/* Estilo para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+  background: url('images/fundo1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fdfafa; /*cor letras rodapé */
+}
+
+/* Sobreposição de fundo com opacidade */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(216, 202, 233, 0.5); /* Sobreposição de cor preta com opacidade */
+  z-index: -1;
+}
+
+
+
+/* Estilo para o cabeçalho */
+header {
+  text-align: center; /* Alinha o conteúdo do cabeçalho ao centro */
+  background: linear-gradient(to right, #0c038b, #424242); /* Degradê do azul mais escuro para um tom mais suave */
+  color: rgb(245, 243, 243); /* Cor do texto do cabeçalho, um tom claro (próximo do branco) */
+  padding: 5px 0; /* Adiciona um padding de 30px acima e abaixo do conteúdo */
+}
+
+/* Estilo para as seções */
+section {
+  margin: 30px 0;
+  padding: 40px;
+  background: rgba(50, 50, 54, 0.7); /* Fundo semitransparente para melhorar o contraste */
+  color: white; /* Torna o texto das seções branco para maior legibilidade */
+  border-radius: 15px;
+}
+
+/* Estilo para os itens da lista */
+ul {
+  padding-left: 20px; /* Adiciona um pequeno afastamento à esquerda para que a lista não fique colada à borda */
+  list-style-type: none; /* Remove os marcadores padrão (como os círculos ou números) da lista */
+}
+
+li {
+  margin-bottom: 10px; /* Adiciona um espaço de 10px entre cada item da lista para que fiquem bem separados */
+  font-size: 1.1em; /* Aumenta um pouco o tamanho da fonte para melhorar a leitura */
+}
+
+strong {
+  color: #1a73e8; /* Define a cor da data em negrito para um tom de azul, tornando-a mais visível */
+}
+
+
+/* Estilo para os links */
+a {
+  color: #f7f4f4; /* Define a cor dos links como um tom muito claro de verde */
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+/* Estilo para os links ao passar o mouse */
+a:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao link quando o mouse passa por cima */
+}
+/* Estilo para modo escuro */
+.dark-mode {
+  background-color: #080808;
+  color: #f3efef;
+}
+.dark-mode section {
+  background-color: rgb(5, 5, 5);
+}
+
+/* Botão de modo escuro */
+#modoEscuro {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 14px;
+  background: #fdfbfb;
+  color: #080808;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Boas-vindas */
+.boas-vindas {
+  text-align: center;
+  padding: 12px;
+  background: 0;
+  font-weight: bold;
+}
+
+/* Animação de fade */
+.escondido {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.10s ease-out;
+}
+.mostrar {
+  opacity: 3;
+  transform: translateY(0);
+}
+
+/* Estilo para o rodapé */
+footer {
+  text-align: center; /* Alinha o conteúdo do rodapé ao centro */
+  margin-top: 50px; /* Adiciona uma margem superior de 50px */
+  padding: 20px; /* Adiciona 20px de padding ao redor do conteúdo do rodapé */
+  background: linear-gradient(to left, #5a5a59, #010033); /* Degradê de azul escuro para um tom ainda mais escuro */
+}
+/* Efeito suave somente em elementos interativos */
+a, button {
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Efeito de hover (cor branca apenas para itens clicáveis) */
+a:hover, button:hover {
+  color: #ffffff; /* ou qualquer outra cor */
+  text-decoration: underline;
+}
