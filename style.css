@@ -1,0 +1,217 @@
+/* Estilo para o corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+  margin: 0; /* Remove a margem padrão */
+  padding: 10px; /* Adiciona um pequeno padding */
+  background: url('images/fundo1.jpg') no-repeat center center fixed; /* Fundo com imagem, centralizada e fixa */
+  background-size: cover; /* A imagem de fundo deve cobrir toda a área visível */
+  color: #fdfafa; /* Cor do texto no corpo */
+}
+
+/* Sobreposição de fundo com opacidade */
+body::before {
+  content: ''; /* Necessário para criar o pseudo-elemento */
+  position: absolute; /* Posiciona o elemento de forma absoluta */
+  top: 0; left: 0; right: 0; bottom: 0; /* Preenche a tela inteira */
+  background: rgba(216, 202, 233, 0.5); /* Cor de sobreposição (leve transparência) */
+  z-index: -1; /* Coloca o pseudo-elemento abaixo do conteúdo */
+}
+
+/* Estilo para o cabeçalho */
+header {
+  text-align: center; /* Alinha o texto do cabeçalho ao centro */
+  background: linear-gradient(to right, #0c038b, #424242); /* Degradê azul para cinza */
+  color: rgb(245, 243, 243); /* Cor clara para o texto */
+  padding: 5px 0; /* Padding de 5px acima e abaixo */
+}
+
+/* Estilo para as seções */
+section {
+  margin: 30px 0; /* Espaçamento superior e inferior */
+  padding: 40px; /* Padding interno de 40px */
+  background: rgba(50, 50, 54, 0.7); /* Fundo semitransparente para boa leitura */
+  color: white; /* Cor do texto branco */
+  border-radius: 15px; /* Bordas arredondadas */
+}
+
+/* Estilo para os itens da lista */
+ul {
+  padding-left: 20px; /* Alinha os itens da lista à direita */
+  list-style-type: none; /* Remove marcadores da lista */
+}
+
+li {
+  margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+  font-size: 1.1em; /* Aumenta o tamanho da fonte dos itens */
+}
+
+strong {
+  color: #1a73e8; /* Cor azul para o texto em negrito */
+}
+
+/* Estilo para os links */
+a {
+  color: #f7f4f4; /* Cor clara para os links */
+  text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+/* Estilo para os links ao passar o mouse */
+a:hover {
+  text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+}
+
+/* Estilo para o modo escuro */
+.dark-mode {
+  background-color: #080808; /* Fundo escuro para o modo escuro */
+  color: #f3efef; /* Texto claro */
+}
+
+.dark-mode section {
+  background-color: rgb(5, 5, 5); /* Fundo escuro nas seções no modo escuro */
+}
+
+/* Botão de modo escuro */
+#modoEscuro {
+  position: fixed; /* Fixa o botão no canto superior direito */
+  top: 10px; right: 10px;
+  padding: 8px 14px; /* Padding do botão */
+  background: #fdfbfb; /* Cor de fundo do botão */
+  color: #080808; /* Cor do texto */
+  border: none; /* Remove a borda padrão */
+  border-radius: 8px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mão para indicar interatividade */
+  z-index: 1000; /* Garante que o botão fique visível acima dos outros elementos */
+}
+
+/* Boas-vindas */
+.boas-vindas {
+  text-align: center; /* Alinha o texto no centro */
+  padding: 12px; /* Padding do bloco */
+  background: rgb(0, 1, 39); /* Cor de fundo escuro */
+  color: #fdfafa; /* Cor do texto clara */
+  font-weight: bold; /* Deixa o texto em negrito */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Animação de fade (efeito de desaparecimento e reaparecimento) */
+.escondido {
+  opacity: 0; /* Inicia invisível */
+  transform: translateY(20px); /* Desloca para baixo */
+  transition: all 0.60s ease-out; /* Animação suave */
+}
+
+.mostrar {
+  opacity: 1; /* Torna visível */
+  transform: translateY(0); /* Retorna à posição original */
+}
+
+/* Estilo para a imagem do projeto */
+.imagem-projeto {
+  width: 600px; /* Tamanho da imagem (pode ser ajustado) */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Bordas arredondadas na imagem */
+  margin: 0 auto; /* Centraliza a imagem */
+  display: block; /* Garante que a imagem seja um bloco e se centralize */
+}
+
+/* Estilo para o container do projeto */
+.projeto-card {
+  text-align: center; /* Centraliza o texto */
+  margin: 20px; /* Margem entre os cartões de projetos */
+  padding: 20px; /* Padding interno */
+  background-color: rgba(50, 50, 54, 0.7); /* Fundo semitransparente */
+  color: white; /* Cor do texto */
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras para profundidade */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .imagem-projeto {
+    width: 200px; /* Reduz o tamanho da imagem para telas menores */
+  }
+
+  .projeto-card {
+    padding: 15px; /* Ajuste no padding */
+  }
+
+  h3 {
+    font-size: 1.4em; /* Ajuste no tamanho da fonte do título */
+  }
+
+  p {
+    font-size: 1em; /* Ajuste no tamanho do parágrafo */
+  }
+
+  .botao-ver {
+    font-size: 1em; /* Ajuste no tamanho do botão */
+    padding: 10px 15px; /* Ajuste no padding do botão */
+  }
+}
+
+/* Media query para telas muito pequenas (como celulares) */
+@media (max-width: 480px) {
+  .imagem-projeto {
+    width: 120px; /* Imagem menor em telas pequenas */
+  }
+
+  .projeto-card {
+    padding: 10px; /* Menos padding */
+  }
+
+  h3 {
+    font-size: 1.2em; /* Tamanho menor para títulos */
+  }
+
+  p {
+    font-size: 0.9em; /* Tamanho menor para parágrafos */
+  }
+
+  .botao-ver {
+    font-size: 0.9em; /* Tamanho menor para o botão */
+    padding: 8px 12px; /* Ajuste no padding do botão */
+  }
+}
+
+/* Estilo para o rodapé */
+footer {
+  text-align: center; /* Alinha o conteúdo ao centro */
+  margin-top: 50px; /* Margem superior */
+  padding: 20px; /* Padding ao redor do rodapé */
+  background: linear-gradient(to left, #5a5a59, #010033); /* Degradê para o fundo do rodapé */
+}
+
+/* Efeito suave somente em elementos interativos */
+a, button {
+  transition: color 0.3s ease-in-out; /* Transição suave para a cor */
+  cursor: pointer; /* Indica interatividade */
+}
+
+/* Efeito de hover (cor branca apenas para itens clicáveis) */
+a:hover, button:hover {
+  color: #ffffff; /* Cor do texto ao passar o mouse */
+  text-decoration: underline; /* Sublinha o link ou botão */
+}
+.rodape-social {
+  text-align: center;
+  padding: 30px 10px;
+  background: linear-gradient(to left, #0a0f2c, #1e2c60);
+  color: #fff;
+  font-size: 0.95em;
+  border-top: 2px solid #1a73e8;
+}
+
+.icones-sociais {
+  margin-top: 10px;
+}
+
+.icones-sociais a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.icones-sociais a:hover {
+  color: #1a73e8;
+}
